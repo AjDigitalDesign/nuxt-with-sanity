@@ -28,7 +28,6 @@ import {groq} from '@nuxtjs/sanity'
 export default {
   name: "PostSlug",
 
-
   async asyncData({params, $sanity}){
     const query =  groq `*[_type =='post' && slug.current == "${params.slug}"][0]{
       "imageUrl": mainImage.asset->url,
